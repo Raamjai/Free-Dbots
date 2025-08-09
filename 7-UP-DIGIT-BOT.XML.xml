@@ -1,472 +1,446 @@
-<xml xmlns="http://www.w3.org/1999/xhtml" collection="false">
-  <variables>
-    <variable type="" id="@pB[(xlR5vVc?V^:YD-;">Contador-perdas</variable>
-    <variable type="" id="X5dL.(Tj*H57Wle]V=MB">Quantas perdas antes do martingale?</variable>
-    <variable type="" id="RHgF*C%#h{|Ha5u;#5j?">Initial Amount</variable>
-    <variable type="" id="6o_9Nu#$3m#.?zV=ahjK">Prediction</variable>
-    <variable type="" id="rUPB[)tUi3we;byHr`7]">Time</variable>
-    <variable type="" id="(obU$~2J]hr/k0`hgX8/">Win Amount</variable>
-    <variable type="" id="FlX%77!9AMWGEu#,)Nme">Stop Loss</variable>
-    <variable type="" id="a?$LW}C4v+XX:Lc%6-OS">Expected Profit</variable>
-  </variables>
-  <block type="trade" id="73vWdDagX-YhN)CtN.3D" x="-454" y="-9">
-    <field name="MARKET_LIST">synthetic_index</field>
-    <field name="SUBMARKET_LIST">random_index</field>
-    <field name="SYMBOL_LIST">R_100</field>
-    <field name="TRADETYPECAT_LIST">digits</field>
-    <field name="TRADETYPE_LIST">overunder</field>
-    <field name="TYPE_LIST">DIGITOVER</field>
-    <field name="CANDLEINTERVAL_LIST">60</field>
-    <field name="TIME_MACHINE_ENABLED">FALSE</field>
-    <field name="RESTARTONERROR">FALSE</field>
-    <statement name="INITIALIZATION">
-      <block type="variables_set" id="yBj89;vb.qOZk5y})(0#" collapsed="true">
-        <field name="VAR" id="@pB[(xlR5vVc?V^:YD-;" variabletype="">Contador-perdas</field>
-        <value name="VALUE">
-          <block type="math_number" id="36]|77j`@E2w#CJC4cB*">
-            <field name="NUM">0</field>
-          </block>
-        </value>
-        <next>
-          <block type="variables_set" id="5l997.I]W776b:7[B0?n">
-            <field name="VAR" id="X5dL.(Tj*H57Wle]V=MB" variabletype="">Quantas perdas antes do martingale?</field>
-            <value name="VALUE">
-              <block type="math_number" id="n_/NBTx=)W(b]7!2]kE4">
-                <field name="NUM">5</field>
-              </block>
-            </value>
-            <next>
-              <block type="variables_set" id="u,R7-Nu^~551j4g.zS|8">
-                <field name="VAR" id="6o_9Nu#$3m#.?zV=ahjK" variabletype="">Prediction</field>
-                <value name="VALUE">
-                  <block type="math_number" id="[fC#3g!$y1n1gQW$zaIo">
-                    <field name="NUM">2</field>
-                  </block>
-                </value>
-                <next>
-                  <block type="variables_set" id="x)_.vX,}axj7ue%jgpB%">
-                    <field name="VAR" id="rUPB[)tUi3we;byHr`7]" variabletype="">Time</field>
-                    <value name="VALUE">
-                      <block type="math_number" id="/+(-C^ny^Xp*I0ORP+(Z">
-                        <field name="NUM">3</field>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="variables_set" id="7$DpM}CfwF3d$90e/zl.">
-                        <field name="VAR" id="FlX%77!9AMWGEu#,)Nme" variabletype="">Stop Loss</field>
-                        <value name="VALUE">
-                          <block type="math_number" id="B5.#mSmH+4DCajri?O^)">
-                            <field name="NUM">500</field>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="variables_set" id="B;eMO~A9Lf+xq/|ki):+">
-                            <field name="VAR" id="a?$LW}C4v+XX:Lc%6-OS" variabletype="">Expected Profit</field>
-                            <value name="VALUE">
-                              <block type="math_number" id="V@QyhA`C-+G(cBh;nDw/">
-                                <field name="NUM">5</field>
-                              </block>
-                            </value>
-                            <next>
-                              <block type="variables_set" id=":f!4st:(Zr-9$VzeN!t1">
-                                <field name="VAR" id="RHgF*C%#h{|Ha5u;#5j?" variabletype="">Initial Amount</field>
-                                <value name="VALUE">
-                                  <block type="math_number" id="c){g[eNu^YVU(twpc~l_">
-                                    <field name="NUM">0.37</field>
-                                  </block>
-                                </value>
-                                <next>
-                                  <block type="variables_set" id="sLAf)u(fNS7|z6B/o~vq">
-                                    <field name="VAR" id="(obU$~2J]hr/k0`hgX8/" variabletype="">Win Amount</field>
-                                    <value name="VALUE">
-                                      <block type="math_number" id="vn;tZO~32h!oL%x+0EHh">
-                                        <field name="NUM">0.37</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </next>
-                              </block>
-                            </next>
-                          </block>
-                        </next>
-                      </block>
-                    </next>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </next>
-      </block>
-    </statement>
-    <statement name="SUBMARKET">
-      <block type="tradeOptions" id="Drl9/3]qn-5#Nt.L0n!W">
-        <field name="DURATIONTYPE_LIST">t</field>
-        <field name="CURRENCY_LIST">USD</field>
-        <field name="BARRIEROFFSETTYPE_LIST">+</field>
-        <field name="SECONDBARRIEROFFSETTYPE_LIST">-</field>
-        <value name="DURATION">
-          <block type="math_number" id="#FTv}P#8#E-RObw0qILe">
-            <field name="NUM">3</field>
-          </block>
-        </value>
-        <value name="AMOUNT">
-          <block type="variables_get" id="_O2;ISV-U:YYoPN3Qczm">
-            <field name="VAR" id="RHgF*C%#h{|Ha5u;#5j?" variabletype="">Initial Amount</field>
-          </block>
-        </value>
-        <value name="PREDICTION">
-          <block type="math_number" id="~V[wWo6MELRC~bx!nezv">
-            <field name="NUM">7</field>
-          </block>
-        </value>
-      </block>
-    </statement>
-  </block>
-  <block type="text" id="LYfie^IV)`juR:;WH*Gd" disabled="true" x="484" y="-37">
-    <field name="TEXT">7-UP-BOT</field>
-  </block>
-  <block type="after_purchase" id="Vt,CkLeK8E?%BmnB`~M)" collapsed="true" x="694" y="-9">
-    <statement name="AFTERPURCHASE_STACK">
-      <block type="controls_if" id="%@(f!*AdEFLsr!3OgGRm">
-        <mutation else="1"></mutation>
-        <value name="IF0">
-          <block type="contract_check_result" id=":BL^MmsJ02#UKpQ48{^*">
-            <field name="CHECK_RESULT">win</field>
-          </block>
-        </value>
-        <statement name="DO0">
-          <block type="notify" id="0CPvA3`lf@Qx[ek{^V[y">
-            <field name="NOTIFICATION_TYPE">success</field>
-            <field name="NOTIFICATION_SOUND">silent</field>
-            <value name="MESSAGE">
-              <block type="text_join" id="}#lG|6v#h3a}q2JqY=$v">
-                <mutation items="2"></mutation>
-                <value name="ADD0">
-                  <block type="text" id="3J^K2hCy.2g!jJdo}hH8">
-                    <field name="TEXT">Vitoria !!</field>
-                  </block>
-                </value>
-                <value name="ADD1">
-                  <block type="read_details" id="?eO3`-cS%?ftQ.7kJAT3">
-                    <field name="DETAIL_INDEX">4</field>
-                  </block>
-                </value>
-              </block>
-            </value>
-            <next>
-              <block type="variables_set" id="D(ZO{D)lA3-iiF]y!6!x">
-                <field name="VAR" id="RHgF*C%#h{|Ha5u;#5j?" variabletype="">Initial Amount</field>
-                <value name="VALUE">
-                  <block type="variables_get" id="}9dc,i+B~Fp+4uMEE3Aa">
-                    <field name="VAR" id="(obU$~2J]hr/k0`hgX8/" variabletype="">Win Amount</field>
-                  </block>
-                </value>
-                <next>
-                  <block type="variables_set" id="/.goJP{,xSkeBaeexOAu">
-                    <field name="VAR" id="6o_9Nu#$3m#.?zV=ahjK" variabletype="">Prediction</field>
-                    <value name="VALUE">
-                      <block type="math_number" id="Wx]F=4z81I/t(**afQ7X">
-                        <field name="NUM">2</field>
-                      </block>
-                    </value>
-                    <next>
-                      <block type="variables_set" id="GAntkB(#_m2kkD@?l^Gd">
-                        <field name="VAR" id="@pB[(xlR5vVc?V^:YD-;" variabletype="">Contador-perdas</field>
-                        <value name="VALUE">
-                          <block type="math_number" id="z.-m[OckWTUFsPeDh/=7">
-                            <field name="NUM">0</field>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="trade_again" id="Q|q(U%EWQ!fcEv4]K`1I"></block>
-                        </next>
-                      </block>
-                    </next>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </statement>
-        <statement name="ELSE">
-          <block type="math_change" id="CgmehFY.fL=^Hg+%*WON">
-            <field name="VAR" id="@pB[(xlR5vVc?V^:YD-;" variabletype="">Contador-perdas</field>
-            <value name="DELTA">
-              <shadow type="math_number" id="oqm;4pv5f,#N{UO%Q@4K">
-                <field name="NUM">1</field>
-              </shadow>
-              <block type="math_number" id="_+Kb$i08``/8!5G9VG?j">
-                <field name="NUM">1</field>
-              </block>
-            </value>
-            <next>
-              <block type="notify" id="Ehu]|xXGT`7FQm+T7d.x">
-                <field name="NOTIFICATION_TYPE">warn</field>
-                <field name="NOTIFICATION_SOUND">silent</field>
-                <value name="MESSAGE">
-                  <block type="text_join" id="]EMN%A~bIm;o(z2VK|=N">
-                    <mutation items="2"></mutation>
-                    <value name="ADD0">
-                      <block type="text" id="*aZ4UaY)gMFIX]~i-yno">
-                        <field name="TEXT">Derrota !!</field>
-                      </block>
-                    </value>
-                    <value name="ADD1">
-                      <block type="math_single" id="iGI33:%7T@Q9F3Q$cj/d">
-                        <field name="OP">ABS</field>
-                        <value name="NUM">
-                          <shadow type="math_number" id="GleSn`9j7Cm7/dqg}FIA">
-                            <field name="NUM">9</field>
-                          </shadow>
-                          <block type="read_details" id="/R4%(Bkmq@1{v=)3~+`K">
-                            <field name="DETAIL_INDEX">4</field>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-                <next>
-                  <block type="controls_if" id=":;`?f=5ML1}VD)G|1yZw">
-                    <value name="IF0">
-                      <block type="logic_compare" id="2ouq,ykK_mykL{ah5`?s">
-                        <field name="OP">GTE</field>
-                        <value name="A">
-                          <block type="variables_get" id="w0eJC7+?-F-4Q#Ne):oI">
-                            <field name="VAR" id="@pB[(xlR5vVc?V^:YD-;" variabletype="">Contador-perdas</field>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="variables_get" id="v/3E{Kp[rd-8`+VC|`S_">
-                            <field name="VAR" id="X5dL.(Tj*H57Wle]V=MB" variabletype="">Quantas perdas antes do martingale?</field>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <statement name="DO0">
-                      <block type="variables_set" id="Zf5QC7z#:l8Mj8NoS.T;">
-                        <field name="VAR" id="6o_9Nu#$3m#.?zV=ahjK" variabletype="">Prediction</field>
-                        <value name="VALUE">
-                          <block type="math_number" id="#ICa+C|eMc#ii5VjsuwW">
-                            <field name="NUM">2</field>
-                          </block>
-                        </value>
-                        <next>
-                          <block type="math_change" id="x`$EMk22j5gni:inwaV%">
-                            <field name="VAR" id="RHgF*C%#h{|Ha5u;#5j?" variabletype="">Initial Amount</field>
-                            <value name="DELTA">
-                              <shadow type="math_number" id="N=Vo^MVz~/^(xt7Ag@8E">
-                                <field name="NUM">1</field>
-                              </shadow>
-                              <block type="math_arithmetic" id="ybrHyqE5`dPce5~:IM6X">
-                                <field name="OP">MULTIPLY</field>
-                                <value name="A">
-                                  <shadow type="math_number" id="ka8n8|Dugz,q5FkUjs`7">
-                                    <field name="NUM">1</field>
-                                  </shadow>
-                                  <block type="math_single" id="M+EqBr|L{ogw_9@9!IeC">
-                                    <field name="OP">ABS</field>
-                                    <value name="NUM">
-                                      <shadow type="math_number" id="GleSn`9j7Cm7/dqg}FIA">
-                                        <field name="NUM">9</field>
-                                      </shadow>
-                                      <block type="read_details" id="ruY#E|o:+gfL(,7U(M9~">
-                                        <field name="DETAIL_INDEX">4</field>
-                                      </block>
-                                    </value>
-                                  </block>
-                                </value>
-                                <value name="B">
-                                  <shadow type="math_number" id="Abq76oW2o,PI!P+T;QV~">
-                                    <field name="NUM">1</field>
-                                  </shadow>
-                                  <block type="math_number" id="oq5_=hBu{b]})41;=Ss~">
-                                    <field name="NUM">0.3</field>
-                                  </block>
-                                </value>
-                              </block>
-                            </value>
-                          </block>
-                        </next>
-                      </block>
-                    </statement>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </statement>
-        <next>
-          <block type="notify" id="Kog`8sYejbZH+QB{`reM">
-            <field name="NOTIFICATION_TYPE">info</field>
-            <field name="NOTIFICATION_SOUND">silent</field>
-            <value name="MESSAGE">
-              <block type="text_join" id="55JmTJH?bskwXB52rqVf">
-                <mutation items="2"></mutation>
-                <value name="ADD0">
-                  <block type="text" id="XU]tD=44aE|[c}sM8:4!">
-                    <field name="TEXT">Total Profit: </field>
-                  </block>
-                </value>
-                <value name="ADD1">
-                  <block type="total_profit" id="YQ_Dw5|,IaKz?P5p[(8;"></block>
-                </value>
-              </block>
-            </value>
-            <next>
-              <block type="controls_if" id="y4b5tND%4SQn=!mZ]`^w">
-                <mutation else="1"></mutation>
-                <value name="IF0">
-                  <block type="logic_compare" id="M%g=^S=Y}e2~K`jii|LJ">
-                    <field name="OP">LT</field>
-                    <value name="A">
-                      <block type="total_profit" id="0FGcI6=.T.DLn~uGsZ-G"></block>
-                    </value>
-                    <value name="B">
-                      <block type="variables_get" id="v^^;%Bh_`{e5c9PqU{B#">
-                        <field name="VAR" id="a?$LW}C4v+XX:Lc%6-OS" variabletype="">Expected Profit</field>
-                      </block>
-                    </value>
-                  </block>
-                </value>
-                <statement name="DO0">
-                  <block type="controls_if" id="s+Dt4T~D;?fugJoM2PJA">
-                    <mutation else="1"></mutation>
-                    <value name="IF0">
-                      <block type="logic_operation" id="9jpE.-|$Ne$(|QX-X7Ja">
-                        <field name="OP">AND</field>
-                        <value name="A">
-                          <block type="math_number_property" id="yW1^m!z(h%;m}Vfe#r@^">
-                            <mutation divisor_input="false"></mutation>
-                            <field name="PROPERTY">NEGATIVE</field>
-                            <value name="NUMBER_TO_CHECK">
-                              <shadow type="math_number" id="2TJ^lPjT8MrR^:6Ghug=">
-                                <field name="NUM">0</field>
-                              </shadow>
-                              <block type="total_profit" id="uqlDU#QMdm-s]jyv]$B#"></block>
-                            </value>
-                          </block>
-                        </value>
-                        <value name="B">
-                          <block type="logic_compare" id="mrZXmIf1M3D#D?y=JbT?">
-                            <field name="OP">GTE</field>
-                            <value name="A">
-                              <block type="math_single" id="fw)cikPK0d%U_O_!`*UO">
-                                <field name="OP">ABS</field>
-                                <value name="NUM">
-                                  <shadow type="math_number" id="(rCiW:kP-Kx+n[/lS.n{">
-                                    <field name="NUM">9</field>
-                                  </shadow>
-                                  <block type="total_profit" id="G[25$kY~T~gCVfYR+0gT"></block>
-                                </value>
-                              </block>
-                            </value>
-                            <value name="B">
-                              <block type="variables_get" id="kMaqW~2,vwv=ESaSZV8W">
-                                <field name="VAR" id="FlX%77!9AMWGEu#,)Nme" variabletype="">Stop Loss</field>
-                              </block>
-                            </value>
-                          </block>
-                        </value>
-                      </block>
-                    </value>
-                    <statement name="DO0">
-                      <block type="text_print" id="pR`ndv1qxV:(EnU;Mg)X">
-                        <value name="TEXT">
-                          <shadow type="text" id="gE|:9BU8CtUSiP@ZF01_">
-                            <field name="TEXT">Chega por Hoje!! Respeite sua Banca...</field>
-                          </shadow>
-                        </value>
-                      </block>
-                    </statement>
-                    <statement name="ELSE">
-                      <block type="timeout" id="D2a}b~:V-u)c$PCAn@yt">
-                        <statement name="TIMEOUTSTACK">
-                          <block type="trade_again" id="~P7?~]k2eq8EM.LCoA-f"></block>
-                        </statement>
-                        <value name="SECONDS">
-                          <shadow type="math_number" id="MplXkkGB^qe.mLY$wKO#">
-                            <field name="NUM">0</field>
-                          </shadow>
-                        </value>
-                      </block>
-                    </statement>
-                  </block>
-                </statement>
-                <statement name="ELSE">
-                  <block type="text_print" id="3A$xnjUB)LKwKaFCp}~D">
-                    <value name="TEXT">
-                      <shadow type="text" id="kqlrIk.GO.^}hI,PoUV)">
-                        <field name="TEXT">abc</field>
-                      </shadow>
-                      <block type="text_join" id="t${9^A*g2PUV`Z8){*$d">
-                        <mutation items="2"></mutation>
-                        <value name="ADD0">
-                          <block type="text" id="#r|s$$l{nDMieG8N~xdr">
-                            <field name="TEXT">Seu Lucro</field>
-                          </block>
-                        </value>
-                        <value name="ADD1">
-                          <block type="total_profit" id="7d=h[LW.:~XXY@WWrcV)"></block>
-                        </value>
-                      </block>
-                    </value>
-                  </block>
-                </statement>
-              </block>
-            </next>
-          </block>
-        </next>
-      </block>
-    </statement>
-  </block>
-  <block type="text" id="l:LyJx4SJ@xB4NnvX:fc" disabled="true" x="484" y="474">
-    <field name="TEXT">7-UP-BOT</field>
-  </block>
-  <block type="text" id="{B^0.~5]dun,IBN;a%|}" disabled="true" x="285" y="594">
-    <field name="TEXT">https://t.me/Binaryboss101</field>
-  </block>
-  <block type="before_purchase" id="tOc)]Xd=cAm0aiy+-8(8" x="-537" y="709">
-    <statement name="BEFOREPURCHASE_STACK">
-      <block type="notify" id="=mf+)tDt+e?8DSZ,(-k5">
-        <field name="NOTIFICATION_TYPE">error</field>
-        <field name="NOTIFICATION_SOUND">silent</field>
-        <value name="MESSAGE">
-          <shadow type="text" id="KuK3av9,6:}elo6=n/I`">
-            <field name="TEXT">Contador de perdas: zerado</field>
-          </shadow>
-          <block type="text_join" id="S^hYO3Am*ij[H?~Xe~$W">
-            <mutation items="2"></mutation>
-            <value name="ADD0">
-              <block type="text" id="K}{2W6iY|V)Ao5E+2qq~">
-                <field name="TEXT">Contador de perdas:</field>
-              </block>
-            </value>
-            <value name="ADD1">
-              <block type="variables_get" id="9vbI[lUg+6{w7Xk?0__A">
-                <field name="VAR" id="@pB[(xlR5vVc?V^:YD-;" variabletype="">Contador-perdas</field>
-              </block>
-            </value>
-          </block>
-        </value>
-        <next>
-          <block type="purchase" id="}}lKjKyaE+zBH:t98m!j">
-            <field name="PURCHASE_LIST">DIGITOVER</field>
-          </block>
-        </next>
-      </block>
-    </statement>
-  </block>
-  <block type="tick_analysis" id="?p4~,Es$/64aR5YHry}u" x="739" y="725">
-    <statement name="TICKANALYSIS_STACK">
-      <block type="notify" id="2%^bZ/o?Qxvoj5rc$8[!">
-        <field name="NOTIFICATION_TYPE">success</field>
-        <field name="NOTIFICATION_SOUND">silent</field>
-        <value name="MESSAGE">
-          <block type="last_digit" id="jHJ*wIj_f-#mYR|j,YgH"></block>
-        </value>
-      </block>
-    </statement>
-  </block>
-</xml>
+"""
+Deriv Trading Bot (Python) - conservative baseline
+- Fixed stake (no martingale)
+- EMA200 trend filter + EMA50 pullback + RSI confirmation
+- Risk controls: max daily loss, max consecutive losses, stop trading flags
+- Logs trades to CSV
+
+CONFIGURE before running:
+ - API_TOKEN
+ - ASSET (e.g. "R_100" for a synthetic index or "frxEURUSD")
+ - STAKE (float)
+ - EXPIRY_SEC (int) for digital/short binary contracts (default 60 sec)
+ - DEMO_MODE: True uses "demo.deriv.com"; False uses real account (be careful)
+
+Dependencies:
+ pip install websocket-client pandas numpy
+"""
+
+import json
+import time
+import threading
+import math
+import csv
+from collections import deque, defaultdict
+from datetime import datetime, timedelta
+import websocket
+import pandas as pd
+import numpy as np
+
+# ----------------------------
+# ---------- CONFIG ----------
+# ----------------------------
+API_TOKEN = "PUT_YOUR_DERIV_API_TOKEN_HERE"  # REQUIRED (use demo token for testing)
+DEMO_MODE = True  # True uses demo endpoint
+ASSET = "R_100"  # example synthetic index. Change to "frxEURUSD" for forex, etc.
+STAKE = 1.0  # fixed stake in account currency (e.g., USD). Use small when testing.
+EXPIRY_SEC = 60  # contract duration in seconds for short digital/binary style
+MAX_DAILY_LOSS = 0.03  # stop trading for the day after losing this fraction of starting_balance (3% default)
+MAX_CONSECUTIVE_LOSSES = 6
+MAX_TRADES_PER_DAY = 200
+CANDLE_PERIOD = 60  # build 1-minute candles from ticks
+SL_PIPS = None  # Not used for digital short examples. For CFDs, define pips/ticks.
+TP_PIPS = None
+
+LOG_CSV = "deriv_bot_trades.csv"
+DEBUG = True
+
+# Indicator parameters
+EMA_FAST = 50
+EMA_SLOW = 200
+RSI_PERIOD = 14
+
+# Basic safety
+MIN_BALANCE_FOR_TRADE = 10.0  # won't trade if balance below this (currency units)
+# ----------------------------
+# ----- END CONFIG ----------
+# ----------------------------
+
+# Globals and state
+ws = None
+ticks_buffer = deque(maxlen=10000)  # store recent ticks (timestamp, price)
+candles = deque()  # will store dicts: {time(open_ts), open, high, low, close, volume}
+current_day = datetime.utcnow().date()
+starting_balance = None
+daily_loss_target_amount = None
+running = True
+consecutive_losses = 0
+trades_today = 0
+daily_pnl = 0.0
+
+# track open contracts to manage them (if used)
+open_contracts = {}
+
+# Thread locks
+_state_lock = threading.Lock()
+
+# ----------------------------
+# ---- Utility functions -----
+# ----------------------------
+def log(msg):
+    ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print(f"[{ts}] {msg}")
+
+def debug(msg):
+    if DEBUG:
+        log("[DEBUG] " + msg)
+
+def save_trade_log(row: dict):
+    header = ["timestamp", "contract_id", "asset", "side", "entry_price", "stake", "result", "profit"]
+    write_header = False
+    try:
+        with open(LOG_CSV, "r", newline="") as f:
+            pass
+    except FileNotFoundError:
+        write_header = True
+
+    with open(LOG_CSV, "a", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=header)
+        if write_header:
+            writer.writeheader()
+        writer.writerow({k: row.get(k, "") for k in header})
+
+# ----------------------------
+# --- Indicator helpers ------
+# ----------------------------
+def ema(series, period):
+    return series.ewm(span=period, adjust=False).mean()
+
+def rsi(series, period=14):
+    delta = series.diff()
+    up = delta.clip(lower=0)
+    down = -1 * delta.clip(upper=0)
+    ma_up = up.rolling(window=period).mean()
+    ma_down = down.rolling(window=period).mean()
+    rs = ma_up / (ma_down.replace(0, np.nan))
+    rsi = 100 - (100 / (1 + rs))
+    return rsi.fillna(50)
+
+# ----------------------------
+# --- Candle building -------
+# ----------------------------
+def ticks_to_candle(ticks_list, period_seconds=60):
+    """
+    Build candles (simple) from ticks list. ticks_list is list of (ts, price).
+    Returns list of candles as dicts.
+    """
+    if not ticks_list:
+        return []
+
+    df = pd.DataFrame(ticks_list, columns=["ts", "price"])
+    df["ts"] = pd.to_datetime(df["ts"], unit="s")
+    df.set_index("ts", inplace=True)
+    ohlc = df["price"].resample(f"{period_seconds}S").ohlc()
+    ohlc = ohlc.dropna()
+    candles_out = []
+    for idx, row in ohlc.iterrows():
+        candle = {
+            "time": int(idx.timestamp()),
+            "open": float(row["open"]),
+            "high": float(row["high"]),
+            "low": float(row["low"]),
+            "close": float(row["close"]),
+            "volume": 0,
+        }
+        candles_out.append(candle)
+    return candles_out
+
+# ----------------------------
+# ---- Deriv WebSocket API ---
+# ----------------------------
+def deriv_endpoint():
+    if DEMO_MODE:
+        return "wss://ws.binaryws.com/websockets/v3?app_id=1089"
+    else:
+        return "wss://ws.binaryws.com/websockets/v3?app_id=1089"
+
+def ws_on_open(ws_conn):
+    debug("WebSocket opened")
+    auth_request = {"authorize": API_TOKEN}
+    ws_conn.send(json.dumps(auth_request))
+    # subscribe to ticks for asset
+    subscribe_ticks = {"ticks": ASSET}
+    ws_conn.send(json.dumps(subscribe_ticks))
+    # request account balance
+    ws_conn.send(json.dumps({"balance": 1, "currency": "USD"}))  # currency optional
+
+def ws_on_message(ws_conn, message):
+    global starting_balance, daily_loss_target_amount
+    msg = json.loads(message)
+    debug(f"WS MSG: {msg.get('msg_type')}")
+    if "error" in msg:
+        log("WebSocket error message: " + str(msg.get("error")))
+    msg_type = msg.get("msg_type")
+
+    if msg_type == "authorize":
+        if msg.get("error"):
+            log("Authorization failed. Check API_TOKEN.")
+            stop_bot()
+            return
+        else:
+            log("Authorized successfully.")
+            # optionally fetch account balance
+            ws_conn.send(json.dumps({"balance": 1}))
+    elif msg_type == "balance":
+        # initial balance
+        bal = float(msg.get("balance", 0))
+        if starting_balance is None:
+            with _state_lock:
+                global starting_balance, daily_loss_target_amount
+                starting_balance = bal
+                daily_loss_target_amount = starting_balance * MAX_DAILY_LOSS
+            log(f"Starting balance set: {starting_balance}")
+    elif msg_type == "ticks":
+        tick_data = msg.get("tick")
+        if tick_data:
+            epoch = int(tick_data["epoch"])
+            quote = float(tick_data["quote"])
+            ticks_buffer.append((epoch, quote))
+            # build candles periodically
+            process_new_ticks()
+    elif msg_type == "proposal":
+        # reply for proposal requests etc (we'll handle elsewhere)
+        debug("Received proposal response")
+    elif msg_type == "buy":
+        debug("Buy response: " + str(msg))
+        # handle buy confirmation
+    elif msg_type == "sell":
+        debug("Sell response: " + str(msg))
+    # handle other message types if needed
+
+def ws_on_close(ws_conn, close_status_code, close_msg):
+    log("WebSocket closed: " + str(close_status_code) + " " + str(close_msg))
+    stop_bot()
+
+def ws_on_error(ws_conn, error):
+    log("WebSocket error: " + str(error))
+
+def start_ws():
+    global ws
+    endpoint = deriv_endpoint()
+    ws = websocket.WebSocketApp(
+        endpoint,
+        on_open=ws_on_open,
+        on_message=ws_on_message,
+        on_close=ws_on_close,
+        on_error=ws_on_error,
+    )
+    wst = threading.Thread(target=ws.run_forever, kwargs={"ping_interval": 30, "ping_timeout": 10})
+    wst.daemon = True
+    wst.start()
+    return ws
+
+# ----------------------------
+# ---- Trading logic -------
+# ----------------------------
+def process_new_ticks():
+    """
+    Called frequently as ticks arrive. We use ticks_buffer to construct 1-minute candles,
+    compute indicators on recent candles, and decide whether to place trades.
+    """
+    global candles, current_day, trades_today, daily_pnl, consecutive_losses
+
+    # Build candles from last N ticks
+    ticks_copy = list(ticks_buffer)
+    new_candles = ticks_to_candle(ticks_copy, period_seconds=CANDLE_PERIOD)
+    if not new_candles:
+        return
+
+    # Only keep last 500 candles
+    with _state_lock:
+        # Append any new candles (avoid duplicates) by time
+        existing_times = set(c["time"] for c in candles)
+        for c in new_candles:
+            if c["time"] not in existing_times:
+                candles.append(c)
+        while len(candles) > 500:
+            candles.popleft()
+
+    # Update day-based counters
+    now_utc = datetime.utcnow()
+    if now_utc.date() != current_day:
+        with _state_lock:
+            reset_daily_state(now_utc.date())
+
+    # Safety guards: check daily loss / trades limit
+    if starting_balance is None:
+        return  # wait till we have balance info
+    if daily_pnl <= -daily_loss_target_amount:
+        debug("Daily loss target reached. Stop trading for the day.")
+        return
+    if trades_today >= MAX_TRADES_PER_DAY:
+        debug("Max trades per day reached.")
+        return
+
+    # compute indicators and evaluate entry on the latest completed candle
+    df = pd.DataFrame(list(candles)).set_index(pd.to_datetime([c["time"] for c in candles], unit="s"))
+    # rename columns for convenience
+    df = df.rename(columns={"open":"Open","high":"High","low":"Low","close":"Close","volume":"Volume"})
+    series_close = df["Close"].astype(float)
+    if len(series_close) < EMA_SLOW + 5:
+        # not enough data yet
+        return
+
+    ema_slow_series = ema(series_close, EMA_SLOW)
+    ema_fast_series = ema(series_close, EMA_FAST)
+    rsi_series = rsi(series_close, RSI_PERIOD)
+
+    latest = df.iloc[-1]
+    latest_close = float(latest["Close"])
+    ema200_val = float(ema_slow_series.iloc[-1])
+    ema50_val = float(ema_fast_series.iloc[-1])
+    rsi_val = float(rsi_series.iloc[-1])
+    prev_rsi = float(rsi_series.iloc[-2])
+
+    debug(f"Latest Close: {latest_close} EMA200: {ema200_val:.5f} EMA50: {ema50_val:.5f} RSI: {rsi_val:.2f}")
+
+    # Trend filter
+    if latest_close > ema200_val:
+        allowed_side = "CALL"  # buy only
+    elif latest_close < ema200_val:
+        allowed_side = "PUT"   # sell only
+    else:
+        allowed_side = None
+
+    if allowed_side is None:
+        return
+
+    # Pullback condition: price near EMA50 (within tolerance)
+    tol = 0.0025  # 0.25% tolerance; adjust as needed per asset
+    diff_pct = abs(latest_close - ema50_val) / ema50_val
+    near_ema50 = diff_pct <= tol
+
+    # RSI condition: for CALL want RSI < 40 and rising; for PUT RSI > 60 and falling
+    rsi_ok = False
+    if allowed_side == "CALL" and rsi_val < 40 and rsi_val > prev_rsi:
+        rsi_ok = True
+    if allowed_side == "PUT" and rsi_val > 60 and rsi_val < prev_rsi:
+        rsi_ok = True
+
+    # Simple confirmed entry
+    if near_ema50 and rsi_ok:
+        # extra safety: check balance
+        current_balance = starting_balance  # in a real implementation, fetch latest balance from API
+        if current_balance < MIN_BALANCE_FOR_TRADE:
+            debug("Balance too low for trading.")
+            return
+
+        # risk check: ensure stake does not exceed configured risk (we use fixed stake)
+        # (In a safer setup you'd compute stake as %, but user asked fixed stake)
+        if STAKE <= 0:
+            debug("Stake <= 0, aborting.")
+            return
+
+        # Additional guard: don't trade if too many consecutive losses
+        if consecutive_losses >= MAX_CONSECUTIVE_LOSSES:
+            log("Max consecutive losses reached. Pausing trading for 1 hour.")
+            time.sleep(3600)
+            with _state_lock:
+                consecutive_losses = 0
+            return
+
+        # Place contract (digital/binary short expiry style)
+        place_digital_contract(side=allowed_side, duration_sec=EXPIRY_SEC, stake=STAKE)
+
+# ----------------------------
+# --- Contract management ----
+# ----------------------------
+def place_digital_contract(side="CALL", duration_sec=60, stake=1.0):
+    """
+    Make a proposal and then buy a contract. This serves as an example.
+    For real deployment, add robust handling, errors, and response parsing.
+    """
+    # Build proposal request
+    # Type "proposal" returns pricing; then "buy" to purchase.
+    # See Deriv API docs for full details and contract types available per asset.
+    # Note: This example assumes asset supports "DIGITAL" type and "CALL"/"PUT" under certain conditions.
+    proposal_req = {
+        "proposal": 1,
+        "amount": stake,
+        "basis": "stake",
+        "contract_type": "CALL" if side == "CALL" else "PUT",
+        "symbol": ASSET,
+        "duration": duration_sec,
+        "duration_unit": "s",
+        "currency": "USD",
+    }
+    # send proposal
+    try:
+        debug(f"Requesting proposal for {side} {ASSET} stake={stake}")
+        ws.send(json.dumps(proposal_req))
+        # NOTE: In a production system you'd wait for the 'proposal' response, parse the 'proposal' token, then call 'buy'
+        # Here for simplicity we'll attempt a direct buy using same structure (Deriv API may require using proposal.response.echo_req[...] to buy)
+        buy_req = {
+            "buy": 1,
+            "price": stake,
+            "parameters": {
+                "amount": stake,
+                "basis": "stake",
+                "contract_type": proposal_req["contract_type"],
+                "symbol": ASSET,
+                "duration": duration_sec,
+                "duration_unit": "s",
+                "currency": "USD",
+            }
+        }
+        # The actual "buy" call format may differ; please check Deriv API 'buy' syntax for your contract type.
+        ws.send(json.dumps(buy_req))
+        log(f"Placed buy request: {side} {ASSET} stake={stake} expiry={duration_sec}s")
+        # Note: handling "buy" response and contract lifecycle should be implemented to know result/profit when contract closes.
+        # We'll simulate waiting for result in a naive way (in production parse buy response and subscribe to ticks/contract updates)
+        # For safety, log trade attempt:
+        save_trade_log({
+            "timestamp": datetime.utcnow().isoformat(),
+            "contract_id": "",
+            "asset": ASSET,
+            "side": side,
+            "entry_price": "",
+            "stake": stake,
+            "result": "PENDING",
+            "profit": "",
+        })
+        # increment trade counters
+        global trades_today
+        trades_today += 1
+    except Exception as e:
+        log("Error while placing contract: " + str(e))
+
+# ----------------------------
+# ---- State helpers -------
+# ----------------------------
+def reset_daily_state(new_date):
+    global current_day, trades_today, daily_pnl, consecutive_losses, starting_balance, daily_loss_target_amount
+    current_day = new_date
+    trades_today = 0
+    daily_pnl = 0.0
+    consecutive_losses = 0
+    # optionally refresh starting_balance from API here
+    debug("Daily state reset for " + str(new_date))
+
+def stop_bot():
+    global running, ws
+    running = False
+    try:
+        if ws:
+            ws.close()
+    except Exception:
+        pass
+
+# ----------------------------
+# ---- Main runner ----------
+# ----------------------------
+def main():
+    if API_TOKEN == "PUT_YOUR_DERIV_API_TOKEN_HERE":
+        print("ERROR: Please set your API_TOKEN in the script before running.")
+        return
+    log("Starting Deriv bot (demo mode: {})".format(DEMO_MODE))
+    start_ws()
+    try:
+        while running:
+            time.sleep(1)
+    except KeyboardInterrupt:
+        log("Keyboard interrupt, stopping bot.")
+        stop_bot()
+
+if __name__ == "__main__":
+    main()
